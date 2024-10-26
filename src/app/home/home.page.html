@@ -1,9 +1,41 @@
-<!---->
-<ion-content class="ion-padding">
-  <h1>Content</h1>
+<!-- CONTENIDO DE LA PÁGINA -->
+<ion-content class="ion-padding" [fullscreen]="true">
+
+  @for(post of posts; track posts.id){
+
+  <ion-grid [fixed]="true">
+
+    <ion-card class="card-container">
+      <ion-card-header class="card-info-title">
+        <div class="first-column">
+          <ion-img class="image-user" src="https://i.ibb.co/PY4WRTK/profile-picture.png"></ion-img>
+          <ion-label>User: {{post.userId}}</ion-label>
+        </div>
+        <div class="second-column">
+          <ion-card-subtitle class="id">#{{post.id}}</ion-card-subtitle>
+          <ion-card-title class="titulo-post">{{post.title}}</ion-card-title>
+        </div>
+      </ion-card-header>
+
+      <ion-card-content class="body-post">
+        {{post.body}}
+      </ion-card-content>
+
+      <div class="botones">
+        <ion-button fill="clear">Me gusta</ion-button>
+        <ion-button fill="clear">Comentar</ion-button>
+      </div>
+    </ion-card>
+
+  </ion-grid>
+
+  }
+
 </ion-content>
+
+<!-- FOOTER -->
 <ion-footer>
   <ion-toolbar>
-    <ion-title>Social Posts</ion-title>
+    <ion-title class="footer-container">Social Media Post</ion-title>
   </ion-toolbar>
 </ion-footer>
