@@ -9,7 +9,7 @@
       <ion-card-header class="card-info-title">
         <div class="first-column">
           <ion-img class="image-user" src="https://i.ibb.co/PY4WRTK/profile-picture.png"></ion-img>
-          <ion-label>User: {{post.userId}}</ion-label>
+          <ion-label class="user-id">User: {{post.userId}}</ion-label>
         </div>
         <div class="second-column">
           <ion-card-subtitle class="id">#{{post.id}}</ion-card-subtitle>
@@ -22,8 +22,8 @@
       </ion-card-content>
 
       <div class="botones">
-        <ion-button fill="clear">Me gusta</ion-button>
-        <ion-button fill="clear">Comentar</ion-button>
+        <ion-button fill="clear"><ion-icon class="icon-padding" name="heart"></ion-icon>Me gusta</ion-button>
+        <ion-button fill="clear"><ion-icon class="icon-padding" name="chatbubbles"></ion-icon>Comentar</ion-button>
       </div>
     </ion-card>
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SocialpostAPIService } from '../services/socialpost-api.service';
+import { addIcons } from 'ionicons';
+import { heart, chatbubbles } from 'ionicons/icons';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,9 @@ export class HomePage implements OnInit {
 
   constructor(
     private socialPostApi: SocialpostAPIService
-  ) { }
+  ) {
+    addIcons({ heart, chatbubbles });
+  }
 
   ngOnInit() {
 
