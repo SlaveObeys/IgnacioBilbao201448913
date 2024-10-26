@@ -1,0 +1,27 @@
+<!-- content -->
+<ion-content class="ion-padding">
+
+  <h1>Productos</h1>
+
+  @for(item of items; track item.id){
+  <ion-card>
+    <img alt="Silhouette of mountains" src="{{item.image}}" />
+    <ion-card-header>
+      <ion-card-title>{{item.title}}</ion-card-title>
+      <ion-card-subtitle>${{item.price}}</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-button expand="block">Comprar ahora</ion-button>
+    </ion-card-content>
+  </ion-card>
+  }
+
+</ion-content>
+
+<!-- footer -->
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>Footer</ion-title>
+  </ion-toolbar>
+</ion-footer>

@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
-import { SocialpostAPIService } from '../services/socialpost-api.service';
 import { HttpClientModule } from '@angular/common/http';
+import { FakestoreapiService } from '../services/fakestoreapi.service';
 
 
 @NgModule({
@@ -17,9 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomePageRoutingModule,
     HttpClientModule
   ],
-  declarations: [HomePage],
-  providers: [SocialpostAPIService]
+  providers: [FakestoreapiService],
+  declarations: [HomePage]
 })
-export class HomePageModule {
-
-}
+export class HomePageModule { }
